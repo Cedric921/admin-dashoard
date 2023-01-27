@@ -23,7 +23,7 @@ const NavButton = ({
 	color: string;
 	dotColor?: string;
 }): JSX.Element => (
-	<TooltipComponent content={title} position='BottomCenter'>
+	<TooltipComponent title={title} content={title} position='BottomCenter'>
 		<button
 			type='button'
 			onClick={customFunc}
@@ -33,9 +33,8 @@ const NavButton = ({
 			<span
 				style={{ background: dotColor }}
 				className='absolute inline-flex rounded-full h-2 w-2 right-2 top-2'
-			>
-				{icon}
-			</span>
+			/>
+			{icon}
 		</button>
 	</TooltipComponent>
 );
