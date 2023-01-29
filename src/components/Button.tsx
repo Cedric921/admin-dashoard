@@ -11,7 +11,7 @@ const Button = ({
 	color: string;
 	text: string;
 	borderRadius: string;
-	size?: string;
+	size?: 'md' | 'sm' | 'lg' | 'xl';
 }) => {
 	return (
 		<button

@@ -56,7 +56,7 @@ const Ecommerce = () => {
 			<div className='flex gap-10 flex-wrap justify-center'>
 				<div className='bg-white dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780 shadow-sm'>
 					<div className='flex justify-between'>
-						<p className='font-semibold'>Review updates</p>
+						<p className='font-semibold'>Revenue updates</p>
 						<div className='flex items-center gap-4'>
 							<p className='flex items-center gap-2 text-gray-600 hover:drop-shadow-xl'>
 								<span>
@@ -70,6 +70,49 @@ const Ecommerce = () => {
 								</span>
 								<span>Expense</span>
 							</p>
+						</div>
+					</div>
+					<div className='mt-10 flex gap-10 flex-wrap justify-center'>
+						<div className='border-r-1 m-4 pr-10 border-color'>
+							<div className=''>
+								<p>
+									<span className='text-3xl font-semibold'>$93,439</span>
+									<span className='p-1.5 hover:drop-shadow-xl cursor-pointer bg-green-500 text-xs  rounded-full text-white'>
+										{' '}
+										24%
+									</span>
+								</p>
+								<p className='mt-1 text-gray-500'>Budget</p>
+							</div>
+							<div className='mt-8'>
+								<p>
+									<span className='text-3xl font-semibold'>$10,475</span>
+								</p>
+								<p className='mt-1 text-gray-500'>Expense</p>
+							</div>
+							<div className='mt-5'>
+								<SparkLine
+									currentColor='red'
+									id='line-sparkline'
+									type='Line'
+									height='80px'
+									width='250px'
+									data={SparklineAreaData}
+									color='red'
+								/>
+							</div>
+							<div className='mt-10'>
+								<Button
+									bgColor='blue'
+									borderRadius='10px'
+									color='white'
+									text='Donwload report'
+									size='md'
+								/>
+							</div>
+						</div>
+						<div>
+							<Stacked width='360px' height='360px' />
 						</div>
 					</div>
 				</div>
